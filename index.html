@@ -23,9 +23,31 @@
         grid-template-areas: "blank1 advert business how blank2 privacy terms settings blank3";
 
     }
-
+    .head1 {
+        grid-area: about;
+        justify-content: center;
+        align-content: center;
     }
-    .item3 {
+    .head2 {
+        justify-content: center;
+        align-content: center;
+        grid-area: store;
+    }
+    .head3 {
+        grid-area: blank;
+    }
+    .head4 {
+        justify-content: center;
+        align-content: center;
+        grid-area: email;
+    }
+    .head5 {
+        justify-content: center;
+        align-content: center;
+        grid-area: images;
+    }
+    
+    .item {
         grid-area: logo;
         justify-content: center;
         align-content: center;
@@ -40,10 +62,10 @@
 
 <body>
     <header class="container1">
-        <div><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></div>
-        <div><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></div>
-        <div><a href="https://gmail.com">Gmail</a></div>
-        <div><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></div>
+        <div class="head1"><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></div>
+        <div class="head2"><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></div>
+        <div class="head4"><a href="https://gmail.com">Gmail</a></div>
+        <div class="head5"><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></div>
     </header>
     <main class="container2">
         <div id=logo class="item3">
