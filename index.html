@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <style>
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10px 1fr 1fr 1fr 10px;
+        grid-template-areas: 
+        "head"
+        "gap1"
+        "content"
+        "gap2"
+        "foot";
+    }
     .container1 {
+        grid-area: head;
         display: grid;
         grid-template-columns: 1fr 1fr 10fr 1fr 1fr;
         grid-template-rows: auto;
@@ -8,15 +20,16 @@
             "about store blank email images";
     }
     .container2 {
-        display: grid;
+        grid-area: content;
+        display: block;
         grid-template-rows: 2fr 1fr 1fr;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         grid-template-areas: 
         "logo"
-        "search"
-        "buttons";
+        "search";
     }
     .container3 {
+        grid-area: foot;
         display: grid;
         grid-template-columns: repeat(9,1fr);
         grid-template-rows: auto;
@@ -47,11 +60,55 @@
         grid-area: images;
     }
     
-    .item {
+    .item1 {
         grid-area: logo;
+        justify-content: end;
+        align-content: center;    
+    }
+    .item2 {
+        grid-area: search;
         justify-content: center;
         align-content: center;
-        background: white;
+    }
+
+    .foot1 {
+        grid-area: blank1;
+    }
+    .foot2 {
+        grid-area: blank2;
+    }
+    .foot3 {
+        grid-area: blank3;
+    }
+    .foot4 {
+        grid-area: advert;
+    }
+    .foot5 {
+        grid-area: business;
+    }
+    .foot6 {
+        grid-area: how;
+    }
+    .foot7 {
+        grid-area: privacy;
+    }
+    .foot8 {
+        grid-area: terms;
+    }
+    .foot9 {
+        grid-area: settings;
+    }
+    .center{
+        display: block;
+        width: 32%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .center2 {
+        display: block;
+        width: 48%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
 
@@ -60,7 +117,7 @@
 
 </head>
 
-<body>
+<body class="container">
     <header class="container1">
         <div class="head1"><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></div>
         <div class="head2"><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></div>
@@ -68,23 +125,23 @@
         <div class="head5"><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></div>
     </header>
     <main class="container2">
-        <div id=logo class="item3">
-            <img src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo.">
+        <div id=logo class="item1">
+            <img class="center" src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo.">
         </div>
-        <form>
-            <input type="text" placeholder="Search">
-            <div>
+        <form class="item2">
+            <input type="text" placeholder="Search" class="center2">
+            <div class="center2" style="width: 32%; padding: 10px;">
                 <button type="submit">Google Search</button>
                 <button type="submit">I'm Feeling Lucky</button>
             </div>
         </form>
     </main>
     <footer class="container3">
-        <div><a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2m--ahpm-0000000032-0000000000&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></div>
-        <div><a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Business</a></div>
-        <div><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a></div>
-        <div><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></div>
-        <div><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a></div>
-        <div><a href="https://www.google.com/preferences?hl=en">Settings</a></div>
+        <div class="foot4"><a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2m--ahpm-0000000032-0000000000&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></div>
+        <div class="foot5"><a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Business</a></div>
+        <div class="foot6"><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a></div>
+        <div class="foot7"><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></div>
+        <div class="foot8"><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a></div>
+        <div class="foot9"><a href="https://www.google.com/preferences?hl=en">Settings</a></div>
     </footer>
 </body>
