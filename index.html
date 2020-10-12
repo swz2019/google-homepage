@@ -1,18 +1,52 @@
 <!DOCTYPE html>
+<style>
+    .container1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 10fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "about store blank email images";
+    }
+    .container2 {
+        display: grid;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "logo"
+        "search"
+        "buttons";
+    }
+    .container3 {
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "blank1 advert business how blank2 privacy terms settings blank3";
 
+    }
+
+    }
+    .item3 {
+        grid-area: logo;
+        justify-content: center;
+        align-content: center;
+        background: white;
+    }
+    
+
+</style>
 <head>
 
 </head>
 
 <body>
-    <header>
+    <header class="container1">
         <div><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></div>
         <div><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></div>
         <div><a href="https://gmail.com">Gmail</a></div>
         <div><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></div>
     </header>
-    <main>
-        <div id=logo>
+    <main class="container2">
+        <div id=logo class="item3">
             <img src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo.">
         </div>
         <form>
@@ -23,7 +57,7 @@
             </div>
         </form>
     </main>
-    <footer>
+    <footer class="container3">
         <div><a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2m--ahpm-0000000032-0000000000&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></div>
         <div><a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Business</a></div>
         <div><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a></div>
